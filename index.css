@@ -1,0 +1,178 @@
+body {
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+nav {
+    background: rgb(51, 63, 62);
+    color: white;
+    top: 0px;
+    height: 10vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: fixed;
+    z-index: 10;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.welcome-title {
+    margin: auto 0;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.body-main-top {
+    height: 60vh;
+    background-color: rgb(96, 180, 124);
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10vh;
+}
+
+/* *{
+    border: 1px solid red;
+}  */
+
+.navBarContent {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBarButtons {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBarButtons button {
+    border: 1px solid white;
+    background-color: rgb(51, 63, 62);
+    color: white;
+    padding: 10px 20px;
+    transition: 250ms;
+    font-weight: bold;
+}
+
+.navBarButtons button:hover {
+    border: 1px solid white;
+    background-color: white;
+    color: rgb(51, 63, 62);
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.body-main-bottom {
+    background-color: white;
+    height: 50vh;
+    position: relative;
+    z-index: -3;
+}
+
+.body-main-top .content{
+    color: white;
+    margin-right: 5vw;
+    width: 35vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.body-main-top .content label{
+    font-size: 50px;
+}
+
+.body-main-top .content p{
+    font-size: 20px;
+    line-height: 35px;
+}
+
+
+.floating-lappy {
+    width: 50vw;
+    position: absolute;
+    top: 25vh;
+    transform: rotateZ(-10deg);
+    left: 5vw;
+    animation-name: lappy-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes lappy-animation {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px) rotateZ(-10deg);
+	}
+	50% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatey(-40px) rotateZ(-10deg);
+	}
+	100% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px) rotateZ(-10deg);
+	}
+}
+
+.main-bottom-content{
+    position: absolute;
+    top: 25vh;
+    font-weight: bold;
+    left: 10vw;
+}
+
+.main-bottom-content label{
+    font-size: 50px;
+    color: rgb(53,150,210);
+}
+
+.main-bottom-content p{
+    color: rgb(137,75,158);
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.course-main{
+    height: 200vh;
+    background-color: rgb(53,150,210);
+}
+
+.sticky-div-1{
+    position: sticky;
+    top: 10vh;
+    height: 10vh;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.sticky-div-2{
+    position: sticky;
+    top: 20vh;
+    height: 10vh;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.sticky-div-3{
+    position: sticky;
+    top: 30vh;
+    height: 10vh;
+    background-color: gray;
+    border: 1px solid black;
+}
