@@ -247,7 +247,7 @@ header {
 }
 
 .course-main article {
-    padding: 7vw 10vw;
+    padding: 5vw 10vw;
 }
 
 .course-article-1, .course-article-2, .course-article-3, .course-article-4, .course-article-5 {
@@ -307,7 +307,7 @@ footer {
 
 .happy-coding {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 30px;
     height: 15vh;
     display: flex;
     justify-content: center;
@@ -374,16 +374,18 @@ footer {
         font-size: 12px;
         line-height: 15px;
     }
+    
     .floating-lappy {
-        width: 90vw;
-        top: 44vh;
+        width: 70vw;
+        top: 37vh;
     }
+    
     .navBarButtons button {
         padding: 10px 10px;
         font-size: 10px;
     }
     .body-main-bottom {
-        height: 20vh;
+        height: 25vh;
     }
     .main-bottom-content {
         top: 4vh;
@@ -392,8 +394,9 @@ footer {
         font-size: 30px;
     }
     .main-bottom-content p {
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 13px;
+        line-height: 15px;
+        margin-right: 4vh;
     }
     .sticky-div-1 {
         top: 20vh;
@@ -431,5 +434,12 @@ footer {
     }
     .sticky-div-1 label, .sticky-div-2 label, .sticky-div-3 label, .sticky-div-4 label, .sticky-div-5 label {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+.floating-lappy {
+        width: 90vw;
+        top: 44vh;
     }
 }
