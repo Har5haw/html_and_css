@@ -20,6 +20,7 @@ nav {
     font-weight: bold;
     position: fixed;
     z-index: 10;
+    box-shadow: 0px 15px 15px -1px rgba(0, 0, 0, 0.4);
 }
 
 header {
@@ -171,6 +172,7 @@ header {
     align-items: center;
     color: white;
     font-weight: bold;
+    box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.15);
 }
 
 .sticky-div-1 label, .sticky-div-2 label, .sticky-div-3 label, .sticky-div-4 label, .sticky-div-5 label{
@@ -187,6 +189,7 @@ header {
     align-items: center;
     color: white;
     font-weight: bold;
+    box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.15);
 }
 
 .sticky-div-3{
@@ -201,6 +204,7 @@ header {
     color: white;
     font-weight: bold;
     border: 1px solid rgb(212, 138, 73);
+    box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.15);
 }
 
 .sticky-div-4{
@@ -215,6 +219,7 @@ header {
     color: white;
     font-weight: bold;
     border: 1px solid rgb(148,166,166);
+    box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.15);
 }
 
 .sticky-div-5{
@@ -228,6 +233,7 @@ header {
     align-items: center;
     color: white;
     font-weight: bold;
+    box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.15);
 }
 
 .course-main .title{
@@ -257,6 +263,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     padding: 4vw 10vw;
+    
 }
 
 .course-article-2{
@@ -310,14 +317,14 @@ header {
 footer{
     background: rgb(51, 63, 62);
     width: 100%;
-    height: 20vh;   
+    height: 25vh;   
 }
 
-[aos="fade"] {
-    opacity: 0;
-    transition-property: opacity;
-  }
-  
-  [aos="fade"].aos-animate {
-    opacity: 1;
-  }
+.happy-coding{
+    font-weight: bold;
+    font-size: 50px;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
