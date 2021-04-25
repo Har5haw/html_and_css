@@ -157,15 +157,14 @@ header {
 .main-bottom-content label {
     font-size: 50px;
     color: rgb(53, 150, 210);
-
 }
 
 @keyframes title-animation {
-    0%{
+    0% {
         opacity: 0;
         transform: scaleY(0);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: scaleY(1);
     }
@@ -313,4 +312,86 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .course-article-1, .course-article-2, .course-article-3, .course-article-4, .course-article-5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 4vw 10vw;
+    }
+    .course-article-1 i, .course-article-2 i, .course-article-3 i, .course-article-4 i, .course-article-5 i {
+        display: block;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 35px;
+        width: 90vw;
+        transition: 500ms;
+    }
+    nav {
+        background: rgb(51, 63, 62);
+        height: 20vh;
+        flex-direction: column;
+        width: 100vw;
+    }
+    .navBarContent {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .navBarButtons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .course-article-1 img, .course-article-2 img, .course-article-3 img, .course-article-4 img, .course-article-5 img {
+        height: 15vh;
+    }
+    .body-main-top {
+        height: 40vh;
+        background-color: rgb(96, 180, 124);
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20vh;
+    }
+    .body-main-top .content {
+        width: 50vw;
+    }
+    .body-main-top .content label {
+        font-size: 20px;
+    }
+    .body-main-top .content p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .floating-lappy {
+        width: 40vw;
+        top: 40vh;
+        left: 2vw;
+    }
+    .navBarButtons button {
+        padding: 10px 10px;
+        font-size: 10px;
+    }
+    .body-main-bottom {
+        height: 20vh;
+    }
+    .main-bottom-content {
+        top: 4vh;
+    }
+    .main-bottom-content label {
+        font-size: 30px;
+    }
+
+.main-bottom-content p {
+    font-size: 15px;
+    line-height: 20px;
+}
 }
