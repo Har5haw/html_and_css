@@ -351,6 +351,7 @@ footer {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 20px;
     }
     .course-article-1 img, .course-article-2 img, .course-article-3 img, .course-article-4 img, .course-article-5 img {
         margin-top: 15px;
@@ -410,7 +411,7 @@ footer {
         top: 60vh;
     }
     .happy-coding {
-        font-size: 30px;
+        font-size: 20px;
         height: 10vh;
     }
     footer {
@@ -423,8 +424,12 @@ footer {
     .course-main .description {
         font-size: 10px;
         line-height: 15px;
+        font-weight: normal;
     }
     .course-main article {
         padding: 7vw 7vw;
+    }
+    .sticky-div-1 label, .sticky-div-2 label, .sticky-div-3 label, .sticky-div-4 label, .sticky-div-5 label {
+        font-size: 20px;
     }
 }
