@@ -67,7 +67,7 @@ header {
     background-color: rgb(51, 63, 62);
     color: white;
     padding: 10px 20px;
-    transition: 250ms;
+    transition: 300ms;
     font-weight: bold;
 }
 
@@ -103,11 +103,21 @@ header {
 
 .body-main-top .content label {
     font-size: 50px;
+    animation-name: title-animation;
+    animation-duration: 500ms;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
 }
 
 .body-main-top .content p {
     font-size: 20px;
     line-height: 35px;
+    animation-name: title-animation;
+    animation-duration: 500ms;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
 }
 
 .floating-lappy {
@@ -147,6 +157,18 @@ header {
 .main-bottom-content label {
     font-size: 50px;
     color: rgb(53, 150, 210);
+
+}
+
+@keyframes title-animation {
+    0%{
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scaleY(1);
+    }
 }
 
 .main-bottom-content p {
@@ -268,7 +290,8 @@ header {
 }
 
 .course-article-1 i:hover, .course-article-2 i:hover, .course-article-3 i:hover, .course-article-4 i:hover, .course-article-5 i:hover {
-    transform: scaleX(1.1) scaleY(1.1) scaleZ(1.1);
+    transform: scaleX(1.05) scaleY(1.05) scaleZ(1.1);
+    text-shadow: 2px 2px 8px black;
     cursor: pointer;
 }
 
