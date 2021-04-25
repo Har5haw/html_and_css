@@ -1,4 +1,4 @@
-.main-div{
+.main-div {
     background-color: rgb(172, 121, 181);
     height: 90vh;
     display: flex;
@@ -9,7 +9,7 @@
     justify-content: flex-end;
 }
 
-.main-div .title{
+.main-div .title {
     color: white;
     font-size: 60px;
     font-weight: bold;
@@ -22,40 +22,39 @@
     animation-iteration-count: 1;
 }
 
-.main-div .content{
+.main-div .content {
     width: 60vw;
     padding: 10vw 10vw;
 }
 
 @keyframes title-animation {
-    0%{
+    0% {
         opacity: 0;
         transform: scaleY(0);
     }
-    50%{
+    50% {
         opacity: 0.5;
         transform: scaleY(1.3);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: scaleY(1);
     }
 }
 
 @keyframes image-animation {
-    0%{
+    0% {
         transform: scaleX(1) scaleY(1);
     }
-    50%{
+    50% {
         transform: scaleX(1.05) scaleY(1.05);
     }
-    100%{
+    100% {
         transform: scaleX(1) scaleY(1);
     }
-    
 }
 
-.main-div img{
+.main-div img {
     width: 100%;
     position: absolute;
     top: 0px;
@@ -68,7 +67,7 @@
     animation-timing-function: ease-in-out;
 }
 
-.main-div p{
+.main-div p {
     color: white;
     font-size: 20px;
     line-height: 35px;
@@ -96,19 +95,19 @@ footer {
     align-items: center;
 }
 
-
-
-.hobby-main-1{
+.hobby-main-1 {
     background-color: rgb(96, 180, 124);
 }
-.hobby-main-2{
+
+.hobby-main-2 {
     background-color: rgb(172, 121, 181);
 }
-.hobby-main-3{
+
+.hobby-main-3 {
     background-color: rgb(96, 180, 124);
 }
 
-.hobby-main-1 .head, .hobby-main-2 .head, .hobby-main-3 .head{
+.hobby-main-1 .head, .hobby-main-2 .head, .hobby-main-3 .head {
     width: 100vw;
     height: 10vh;
     display: flex;
@@ -120,84 +119,73 @@ footer {
     box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.15);
 }
 
-.hobby-main-1 .body, .hobby-main-2 .body, .hobby-main-3 .body{
+.hobby-main-1 .body, .hobby-main-2 .body, .hobby-main-3 .body {
     color: white;
     padding: 5vw 5vw;
     display: flex;
 }
 
-.hobby-main-1 .content, .hobby-main-2 .content, .hobby-main-3 .content{
+.hobby-main-1 .content, .hobby-main-2 .content, .hobby-main-3 .content {
     padding: 0 50px;
     width: 50vw;
     font-size: 20px;
     line-height: 35px;
 }
 
-.hobby-main-1 .body img, .hobby-main-2 .body img, .hobby-main-3 .body img{
+.hobby-main-1 .body img, .hobby-main-2 .body img, .hobby-main-3 .body img {
     width: 25vw;
 }
 
-.main-bottom{
+.main-bottom {
     background-color: white;
     height: 40vh;
 }
 
-
-
 @media screen and (max-width: 800px) {
-    .main-div{
+    .main-div {
         margin-top: 20vh;
     }
-
-    .main-div img{
+    .main-div img {
         height: 100vh;
         width: auto;
     }
-
-    .main-div .title{
+    .main-div .title {
         color: white;
         font-size: 30px;
         font-weight: bold;
     }
-    
-    .main-div .content{
+    .main-div .content {
         width: 100vw;
         padding: 20vw 5vw;
     }
-
-    .main-div p{
+    .main-div p {
         color: white;
         font-size: 15px;
         line-height: 35px;
         padding-top: 1vw;
         font-weight: normal;
     }
-
-    .hobby-main-1 .body, .hobby-main-2 .body, .hobby-main-3 .body{
+    .hobby-main-1 .body, .hobby-main-2 .body, .hobby-main-3 .body {
         display: flex;
         flex-direction: column;
     }
-    
-    .hobby-main-1 .content, .hobby-main-2 .content, .hobby-main-3 .content{
+    .hobby-main-1 .content, .hobby-main-2 .content, .hobby-main-3 .content {
         width: 90vw;
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 11px;
+        line-height: 17px;
         padding: 0vw 0vw;
         text-align: center;
     }
-    
-    .hobby-main-1 .body img, .hobby-main-2 .body img, .hobby-main-3 .body img{
+    .hobby-main-1 .body img, .hobby-main-2 .body img, .hobby-main-3 .body img {
         width: 90vw;
     }
-
     .happy-coding {
         font-size: 20px;
     }
-
-    .main-div{
+    .main-div {
         height: 80vh;
     }
-    .main-bottom{
+    .main-bottom {
         height: 30vh;
     }
 }

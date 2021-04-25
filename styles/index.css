@@ -241,7 +241,6 @@ header {
     display: block;
     text-align: center;
     color: white;
-    font-weight: bold;
     font-size: 20px;
     line-height: 35px;
 }
@@ -365,38 +364,39 @@ footer {
         width: 100vw;
         margin-left: 5vw;
         margin-top: 5vw;
-        justify-content:start;
+        justify-content: start;
     }
     .body-main-top .content label {
         font-size: 20px;
     }
     .body-main-top .content p {
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 11px;
+        line-height: 17px;
+        font-weight: normal;
     }
-    
     .floating-lappy {
         width: 70vw;
         top: 37vh;
     }
-    
     .navBarButtons button {
         padding: 10px 10px;
         font-size: 10px;
     }
     .body-main-bottom {
-        height: 25vh;
+        height: 26vh;
     }
     .main-bottom-content {
         top: 4vh;
     }
     .main-bottom-content label {
         font-size: 30px;
+        font-weight: bold;
     }
     .main-bottom-content p {
-        font-size: 13px;
-        line-height: 15px;
+        font-size: 11px;
+        line-height: 17px;
         margin-right: 4vh;
+        font-weight: normal;
     }
     .sticky-div-1 {
         top: 20vh;
@@ -438,7 +438,7 @@ footer {
 }
 
 @media screen and (max-width: 450px) {
-.floating-lappy {
+    .floating-lappy {
         width: 90vw;
         top: 44vh;
     }
