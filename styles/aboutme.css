@@ -34,7 +34,7 @@
     }
     50% {
         opacity: 0.5;
-        transform: scaleY(1.3);
+        transform: scaleY(1.1);
     }
     100% {
         opacity: 1;
@@ -47,7 +47,7 @@
         transform: scaleX(1) scaleY(1);
     }
     50% {
-        transform: scaleX(1.05) scaleY(1.05);
+        transform: scaleX(1.2) scaleY(1.2);
     }
     100% {
         transform: scaleX(1) scaleY(1);

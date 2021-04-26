@@ -360,7 +360,7 @@ footer {
 
 */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
     .course-article-1, .course-article-2, .course-article-3, .course-article-4, .course-article-5 {
         display: flex;
         flex-direction: column;
@@ -502,7 +502,7 @@ footer {
             transform: translatex(0px);
         }
         50%{
-            transform: translatex(-220px);
+            transform: translatex(-200px);
         }
         100%{
             transform: translatex(0px);

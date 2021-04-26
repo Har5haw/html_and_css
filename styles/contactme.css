@@ -1,7 +1,253 @@
-.main-div{
-    background-color: rgb(53, 150, 210);
-    height: 60vh;
+.main-div {
+    height: 90vh;
     display: block;
     margin-top: 10vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 0.99;
+    overflow: hidden;
 }
 
+.main-div .home-image {
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -10;
+    opacity: 0.7;
+}
+
+.main-div .title {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main-div .description {
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    height: 12vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputButton {
+    text-align: center;
+    transition: 0.25s;
+    width: 150px;
+    padding: 10px;
+    outline: none;
+    border-radius: 24px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.inputButton:hover {
+    background: white;
+    color: rgb(51, 63, 62);
+    cursor: pointer;
+    border: 1px solid white;
+    transform: scaleX(1.2) scaleY(1.2);
+}
+
+input {
+    text-align: center;
+    transition: 0.5s;
+    width: 225px;
+    background: transparent;
+    padding: 14px 10px;
+    outline: none;
+    border-radius: 24px;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+}
+
+input:focus {
+    width: 50vw;
+    text-align: center;
+    width: 350px;
+    background: white;
+    color: black;
+}
+
+::placeholder {
+    color: white;
+    font-weight: normal;
+}
+
+.contacts{
+    margin-top: 50px;
+    display: flex;
+}
+
+.icon-expanded{
+    width: 0px;
+    height: 50px;
+    background-color: white;
+    border-radius: 25px;
+    margin: 10px;
+    text-align: center;
+    transition: 500ms;
+    overflow: hidden;
+    font-weight: bold;
+    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-overflow: clip;
+}
+
+.icon{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 25px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+}
+
+.single-contact{
+    position: relative;
+    transition: 1s;
+}
+
+.single-contact:hover .icon-expanded{
+    width: 200px;
+    cursor: pointer;
+}
+
+.single-contact .icon{
+    cursor: pointer;
+}
+
+.icon img{
+    height: 50px;
+}
+
+@media screen and (max-width: 700px) {
+    .main-div {
+        height: 80vh;
+        margin-top: 20vh;
+    }
+
+    .main-div .title {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .main-div .description {
+        color: white;
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 50px;
+        text-align: center;
+        margin: 0px 50px;
+        margin-bottom: 20px;
+    }
+    .icon-expanded{
+        width: 0px;
+        height: 40px;
+        border-radius: 20px;
+        margin: 10px;
+        padding-left: 40px;
+    }
+    
+    .icon{
+        width: 40px;
+        height: 40px;
+        background-color: black;
+        border-radius: 20px;
+        margin: 10px;
+    }
+    
+    .single-contact{
+        position: relative;
+        transition: 1s;
+        font-size: 10px;
+    }
+    
+    .single-contact:hover .icon-expanded{
+        width: 150px;
+    }
+    
+    .icon img{
+        height: 40px;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        height: 12vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .inputButton {
+        text-align: center;
+        transition: 0.25s;
+        width: 100px;
+        padding: 10px;
+        outline: none;
+        border-radius: 24px;
+        border: 1px solid white;
+        background: transparent;
+        color: white;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+    
+    .inputButton:hover {
+        background: white;
+        color: rgb(51, 63, 62);
+        cursor: pointer;
+        border: 1px solid white;
+        transform: scaleX(1.2) scaleY(1.2);
+    }
+    
+    input {
+        text-align: center;
+        transition: 0.5s;
+        width: 200px;
+        background: transparent;
+        padding: 14px 10px;
+        outline: none;
+        border-radius: 24px;
+        border: 1px solid white;
+        color: white;
+        font-weight: bold;
+    }
+    
+    input:focus {
+        width: 50vw;
+        text-align: center;
+        width: 300px;
+        background: white;
+        color: black;
+    }
+}
