@@ -71,7 +71,7 @@ header {
     font-weight: bold;
 }
 
-.button-disable{
+.button-disable {
     border: 1px solid white;
     background-color: white;
     color: rgb(51, 63, 62);
@@ -386,9 +386,12 @@ footer {
         width: 70vw;
         top: 37vh;
     }
-    .navBarButtons button {
+    .navBarButtons .button-enable, .navBarButtons .button-disable {
         padding: 10px 10px;
         font-size: 10px;
+    }
+    .navBarButtons .button-enable:hover {
+        transform: scaleX(1) scaleY(1);
     }
     .body-main-bottom {
         height: 26vh;
@@ -442,9 +445,6 @@ footer {
     }
     .sticky-div-1 label, .sticky-div-2 label, .sticky-div-3 label, .sticky-div-4 label, .sticky-div-5 label {
         font-size: 20px;
-    }
-    .navBarButtons .button-enable:hover {
-        transform: scaleX(1) scaleY(1);
     }
 }
 
