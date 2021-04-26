@@ -8,7 +8,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.code-img{
+.code-img {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
     overflow: hidden;
 }
 
-.code-img img{
+.code-img img {
     width: 100vw;
     animation-duration: 15s;
     animation-name: code-img-animation;
@@ -28,13 +28,13 @@ body::-webkit-scrollbar {
 }
 
 @keyframes code-img-animation {
-    0%{
+    0% {
         transform: translateY(0px);
     }
-    50%{
+    50% {
         transform: translateY(-550px);
     }
-    100%{
+    100% {
         transform: translateY(0px);
     }
 }
@@ -479,7 +479,7 @@ footer {
     .sticky-div-1 label, .sticky-div-2 label, .sticky-div-3 label, .sticky-div-4 label, .sticky-div-5 label {
         font-size: 20px;
     }
-    .code-img img{
+    .code-img img {
         height: 50vh;
         width: auto;
         animation-duration: 20s;
@@ -487,7 +487,7 @@ footer {
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
     }
-    .code-img{
+    .code-img {
         position: absolute;
         top: 0px;
         left: 0px;
@@ -498,13 +498,13 @@ footer {
         overflow: hidden;
     }
     @keyframes code-img-animation {
-        0%{
+        0% {
             transform: translatex(0px);
         }
-        50%{
+        50% {
             transform: translatex(-200px);
         }
-        100%{
+        100% {
             transform: translatex(0px);
         }
     }

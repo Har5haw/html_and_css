@@ -83,7 +83,7 @@ input:focus {
     width: 50vw;
     text-align: center;
     width: 350px;
-    background: white;
+    background: rgb(255, 255, 255);
     color: black;
 }
 
@@ -92,12 +92,12 @@ input:focus {
     font-weight: normal;
 }
 
-.contacts{
+.contacts {
     margin-top: 50px;
     display: flex;
 }
 
-.icon-expanded{
+.icon-expanded {
     width: 0px;
     height: 50px;
     background-color: white;
@@ -114,7 +114,7 @@ input:focus {
     text-overflow: clip;
 }
 
-.icon{
+.icon {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -130,21 +130,21 @@ input:focus {
     background-color: white;
 }
 
-.single-contact{
+.single-contact {
     position: relative;
     transition: 1s;
 }
 
-.single-contact:hover .icon-expanded{
+.single-contact:hover .icon-expanded {
     width: 200px;
     cursor: pointer;
 }
 
-.single-contact .icon{
+.single-contact .icon {
     cursor: pointer;
 }
 
-.icon img{
+.icon img {
     height: 50px;
 }
 
@@ -153,14 +153,12 @@ input:focus {
         height: 80vh;
         margin-top: 20vh;
     }
-
     .main-div .title {
         color: white;
         font-size: 25px;
         font-weight: bold;
         margin-bottom: 20px;
     }
-    
     .main-div .description {
         color: white;
         font-size: 15px;
@@ -170,36 +168,31 @@ input:focus {
         margin: 0px 50px;
         margin-bottom: 20px;
     }
-    .icon-expanded{
+    .icon-expanded {
         width: 0px;
         height: 40px;
         border-radius: 20px;
         margin: 10px;
         padding-left: 40px;
     }
-    
-    .icon{
+    .icon {
         width: 40px;
         height: 40px;
         background-color: black;
         border-radius: 20px;
         margin: 10px;
     }
-    
-    .single-contact{
+    .single-contact {
         position: relative;
         transition: 1s;
         font-size: 10px;
     }
-    
-    .single-contact:hover .icon-expanded{
+    .single-contact:hover .icon-expanded {
         width: 150px;
     }
-    
-    .icon img{
+    .icon img {
         height: 40px;
     }
-
     .input-container {
         display: flex;
         flex-direction: column;
@@ -207,7 +200,6 @@ input:focus {
         justify-content: space-between;
         align-items: center;
     }
-    
     .inputButton {
         text-align: center;
         transition: 0.25s;
@@ -221,7 +213,6 @@ input:focus {
         font-weight: bold;
         margin-top: 30px;
     }
-    
     .inputButton:hover {
         background: white;
         color: rgb(51, 63, 62);
@@ -229,7 +220,6 @@ input:focus {
         border: 1px solid white;
         transform: scaleX(1.2) scaleY(1.2);
     }
-    
     input {
         text-align: center;
         transition: 0.5s;
@@ -242,7 +232,6 @@ input:focus {
         color: white;
         font-weight: bold;
     }
-    
     input:focus {
         width: 50vw;
         text-align: center;
