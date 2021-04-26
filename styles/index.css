@@ -8,6 +8,37 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.code-img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 70vh;
+    z-index: -10;
+    opacity: 0.13;
+    overflow: hidden;
+}
+
+.code-img img{
+    width: 100vw;
+    animation-duration: 15s;
+    animation-name: code-img-animation;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes code-img-animation {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-550px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
 nav {
     background: rgb(51, 63, 62);
     color: white;
@@ -38,12 +69,14 @@ header {
 }
 
 .body-main-top {
-    height: 60vh;
+    height: 70vh;
     background-color: rgb(96, 180, 124);
     width: 100vw;
     display: flex;
     justify-content: flex-end;
     margin-top: 10vh;
+    opacity: 0.999;
+    position: relative;
 }
 
 /* *{
@@ -91,7 +124,7 @@ header {
 
 .body-main-bottom {
     background-color: white;
-    height: 50vh;
+    height: 40vh;
     position: relative;
     z-index: -3;
     display: block;
@@ -131,7 +164,7 @@ header {
 .floating-lappy {
     width: 50vw;
     position: absolute;
-    top: 25vh;
+    top: 15vh;
     transform: rotateZ(-10deg);
     left: 5vw;
     animation-name: lappy-animation;
@@ -157,7 +190,7 @@ header {
 
 .main-bottom-content {
     position: absolute;
-    top: 25vh;
+    top: 15vh;
     font-weight: bold;
     left: 10vw;
 }
@@ -446,11 +479,40 @@ footer {
     .sticky-div-1 label, .sticky-div-2 label, .sticky-div-3 label, .sticky-div-4 label, .sticky-div-5 label {
         font-size: 20px;
     }
+    .code-img img{
+        height: 50vh;
+        width: auto;
+        animation-duration: 20s;
+        animation-name: code-img-animation;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    .code-img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 60vh;
+        z-index: -10;
+        opacity: 0.1;
+        overflow: hidden;
+    }
+    @keyframes code-img-animation {
+        0%{
+            transform: translatex(0px);
+        }
+        50%{
+            transform: translatex(-220px);
+        }
+        100%{
+            transform: translatex(0px);
+        }
+    }
 }
 
 @media screen and (max-width: 450px) {
     .floating-lappy {
         width: 90vw;
-        top: 44vh;
+        top: 24vh;
     }
 }
