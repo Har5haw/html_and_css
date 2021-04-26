@@ -116,7 +116,6 @@ header {
     border: 1px solid white;
     background-color: white;
     color: rgb(51, 63, 62);
-    padding: 10px 20px;
     font-weight: bold;
     cursor: pointer;
     transform: scaleX(1.2) scaleY(1.2);
@@ -424,7 +423,9 @@ footer {
         font-size: 10px;
     }
     .navBarButtons .button-enable:hover {
-        transform: scaleX(1) scaleY(1);
+        transform: none;
+        padding: 10px 10px;
+        font-size: 10px;
     }
     .body-main-bottom {
         height: 26vh;

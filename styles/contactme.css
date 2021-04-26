@@ -161,7 +161,7 @@ input:focus {
     }
     .main-div .description {
         color: white;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: normal;
         margin-bottom: 50px;
         text-align: center;
@@ -196,7 +196,7 @@ input:focus {
     .input-container {
         display: flex;
         flex-direction: column;
-        height: 12vh;
+        height: 14vh;
         justify-content: space-between;
         align-items: center;
     }
