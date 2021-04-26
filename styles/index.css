@@ -340,17 +340,63 @@ header {
 
 footer {
     background: rgb(51, 63, 62);
-    width: 100%;
-    height: 25vh;
+    width: 100vw;
+    height: 30vh;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+footer label {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+footer p {
+    margin: 0px 0px;
+    padding: 0px 100px;
+    letter-spacing: 3px;
+}
+
+footer .content {
+    width: 50vw;
+}
+
+.copyrights {
+    width: 100vw;
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    letter-spacing: normal;
+    right: 10px;
+    padding: 0px 0px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
 }
 
 .happy-coding {
     font-weight: bold;
     font-size: 30px;
-    height: 15vh;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.followme {
+    padding-left: 0px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
 }
 
 /*
@@ -460,7 +506,7 @@ footer {
     }
     .happy-coding {
         font-size: 20px;
-        height: 10vh;
+        height: 5vh;
     }
     footer {
         width: 100%;
@@ -508,6 +554,40 @@ footer {
         100% {
             transform: translatex(0px);
         }
+    }
+    footer {
+        width: 100vw;
+        height: 25vh;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .links {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100vw;
+    }
+    footer label {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        display: block;
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 0px;
+    }
+    footer .content {
+        width: 100vw;
+        margin: 0px 0px;
+    }
+    footer p {
+        margin: 0px 0px;
+        padding: 0px 0px;
+        font-size: 10px;
+        letter-spacing: 0px;
+        margin-bottom: 10px;
+    }
+    .followme {
+        padding-top: 10px;
     }
 }
 
