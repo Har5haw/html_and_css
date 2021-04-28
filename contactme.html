@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <script src="/scripts/script.js"></script>
     <title>Contact Me</title>
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/contactme.css" />
@@ -47,8 +48,10 @@
                 </div>
 
                 <div class="input-container">
-                    <input placeholder="Provide your Email" />
-                    <input placeholder="Provide your Message" />
+                    <input placeholder="Provide your Email" id="email-input"
+                        onkeyup="validateEmail(event.target.value)" />
+                    <input placeholder="Provide your Message" id="message-input"
+                        onkeyup="validateMessage(event.target.value)" />
 
                 </div>
                 <button class="inputButton"><code>Submit</code></button>
