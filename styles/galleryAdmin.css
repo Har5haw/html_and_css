@@ -38,6 +38,7 @@
 
 .row img:hover {
     opacity: 0.5;
+    cursor: pointer;
 }
 
 .row #col-0 .imgContainer, .row #col-1 .imgContainer, .row #col-2 .imgContainer, .row #col-3 .imgContainer {
@@ -54,6 +55,8 @@
     justify-content: center;
     align-items: center;
     z-index: -10;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 @keyframes img-animation {
@@ -182,6 +185,28 @@
 
 body {
     position: relative;
+}
+
+.galleryAdmin {
+    text-align: center;
+    transition: 0.25s;
+    width: 150px;
+    padding: 10px;
+    outline: none;
+    border-radius: 24px;
+    border: 1px solid rgb(51, 63, 62);
+    background: transparent;
+    color: rgb(51, 63, 62);
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.galleryAdmin:hover {
+    background: rgb(51, 63, 62);
+    color: white;
+    cursor: pointer;
+    border: 1px solid rgb(51, 63, 62);
+    transform: scaleX(1.2) scaleY(1.2);
 }
 
 .inputField {}

@@ -83,7 +83,7 @@ function loadImages() {
             if (document.title == "Gallery Admin") {
                 let edit = document.createElement('div');
                 edit.className = "edit";
-                edit.innerHTML = "EDIT";
+                edit.innerHTML = "<code>Click to Edit</code>";
                 img.setAttribute("onclick", "imageEditClick(event.target.id)");
                 contaner.appendChild(edit);
             }
@@ -108,7 +108,7 @@ window.onload = () => {
         })
         .then(data => {
             return new Promise((resolve) => {
-                data.forEach(async (element, index) => {
+                data.forEach(async (element) => {
                     getImgPromise(element.image).then((meta) => {
                         countLoaded++;
                         imagesData.push({ ...element, ...meta });
@@ -119,7 +119,6 @@ window.onload = () => {
                 });
             })
         }).then(imagesData => {
-
             console.log(imagesData.length);
             loadImages();
         });
@@ -130,6 +129,7 @@ function imageEditClick(id) {
     img.src = imagesData[id].image;
 
     let url = document.getElementById('pop-url');
+    url.setAttribute("onkeyup", "changeImagePopup(event.target.value)")
     url.value = imagesData[id].image;
 
     let name = document.getElementById('pop-name');
@@ -145,10 +145,11 @@ function imageEditClick(id) {
     popup.className = "popup-gallery";
 
     let button = document.getElementById("pop-button");
-    button.setAttribute("id", id + "-button");
+    button.id = id + "-button";
     button.setAttribute("onclick", "submitEdit(event.target.id)")
 
-    console.log(id);
+    let close = document.getElementById("pop-close");
+    close.id = id + "-close";
 }
 
 function clickAdd() {
@@ -180,13 +181,16 @@ function changeImagePopup(url) {
     img.src = url;
 }
 
-function submitEdit(id) {
+async function submitEdit(id) {
 
     let imageId = id.split("-")[0];
     console.log(imageId);
 
     let url = document.getElementById('pop-url');
     imagesData[imageId].image = url.value;
+    let { aspectRatio, imgComponent } = await getImgPromise(url.value);
+    imagesData[imageId].aspectRatio = aspectRatio;
+    imagesData[imageId].imgComponent = imgComponent;
 
     let name = document.getElementById('pop-name');
     imagesData[imageId].name = name.value;
@@ -202,6 +206,11 @@ function submitEdit(id) {
 
     let button = document.getElementById(id);
     button.setAttribute("id", "pop-button");
+
+    let close = document.getElementById(imageId + "-close");
+    close.setAttribute("id", "pop-close");
+
+    loadImages();
 
     console.log(imagesData);
 }
@@ -226,10 +235,28 @@ function submitAdd() {
     let date = document.getElementById('pop-date');
     newImage.date = date.value;
 
-    imagesData.push({ ...newImage, aspectRatio: Math.round((img.naturalHeight / img.naturalWidth) * 100) / 100, imgComponent: img });
+    let imageComponent = new Image();
+    imageComponent.src = url.value;
+
+    imagesData.push({ ...newImage, aspectRatio: Math.round((img.naturalHeight / img.naturalWidth) * 100) / 100, imgComponent: imageComponent });
 
     let popup = document.getElementById("popup-gallery");
     popup.className = "popup-off";
 
     loadImages();
+}
+
+function closePop(id) {
+
+    let imageId = id.split("-")[0];
+
+    let button = document.getElementById(imageId + "-button");
+    button.id = "pop-button";
+
+    let close = document.getElementById(imageId + "-close");
+    close.id = "pop-close";
+
+    let popup = document.getElementById("popup-gallery");
+    popup.className = "popup-off";
+
 }

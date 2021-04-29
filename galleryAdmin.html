@@ -30,7 +30,8 @@
                 <input type="date" id="pop-date" style="color: black;" class="inputField" />
                 <br>
                 <br>
-                <button id="pop-button">Submit</button>
+                <div style="display: flex; justify-content: space-between;"><button
+                        id="pop-button">Submit</button><button id="pop-close" onclick="closePop(event.target.id)">Close</button></div>
             </div>
         </div>
         <nav>
@@ -75,7 +76,9 @@
             <div class="column" id="col-3">
             </div>
         </div>
-        <button onclick="clickAdd()">Add Photo</button>
+
+        <div class="happy-coding"><button onclick="clickAdd()" class="galleryAdmin"><code>Add Photo</code></button>
+        </div>
         <div class="happy-coding"></div>
 
         <footer>
