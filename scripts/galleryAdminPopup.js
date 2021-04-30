@@ -1,81 +1,3 @@
-function getImgPromise(url) {
-    const img = new Image();
-    img.src = url;
-    return new Promise((resolve) => {
-        img.onload = function () {
-            resolve({ aspectRatio: Math.round((img.naturalHeight / img.naturalWidth) * 100) / 100, imgComponent: img });
-        }
-    });
-}
-
-let viewData = [[], [], [], []];
-let sumHeight = [0, 0, 0, 0];
-let imagesData = [];
-
-function loadImages(imagesData) {
-    viewData = [[], [], [], []];
-    sumHeight = [0, 0, 0, 0];
-    imagesData.forEach((element, index) => {
-        element.id = index;
-        let min = sumHeight[0];
-        let ind = 0;
-        for (let i = 1; i < 4; i++) {
-            if (min > sumHeight[i]) {
-                min = sumHeight[i];
-                ind = i;
-            }
-        }
-
-        viewData[ind].push(element);
-        sumHeight[ind] += element.aspectRatio;
-    });
-
-    viewData.forEach((element, index) => {
-        let col = document.getElementById("col-" + index);
-        col.innerHTML = '';
-        element.forEach((image) => {
-            let contaner = document.createElement('div');
-            contaner.className = "imgContainer";
-
-            let img = image.imgComponent;
-            img.id = image.id;
-
-            if (document.title == "Gallery Admin") {
-                let edit = document.createElement('div');
-                edit.className = "edit";
-                edit.innerHTML = "<code>Click to Edit</code>";
-                img.setAttribute("onclick", "imageEditClick(event.target.id)");
-                contaner.appendChild(edit);
-            }
-            contaner.appendChild(image.imgComponent);
-
-            col.appendChild(contaner);
-
-        });
-    })
-    console.log(viewData);
-}
-
-window.onload = () => {
-    fetch("/jsonFiles/images.json")
-        .then(response => {
-            return response.json();
-        })
-        .then(data => {
-            return new Promise((resolve) => {
-                data.forEach(async (element, index) => {
-                    let metaData = await getImgPromise(element.image);
-                    imagesData.push({ ...element, ...metaData });
-                    if (index == data.length - 1) {
-                        resolve(imagesData);
-                    }
-                });
-            })
-        }).then(imagesData => {
-            loadImages(imagesData);
-        });
-}
-
 function getFormData() {
     return {
         imgComponent: document.getElementById('pop-img'),
@@ -182,5 +104,4 @@ function closePop(id) {
     document.getElementById(imageId + "-close").id = "pop-close";
 
     document.getElementById("popup-gallery").className = "popup-off";
-
 }
