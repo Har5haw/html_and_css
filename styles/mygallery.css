@@ -5,7 +5,6 @@
   background-color: rgb(81, 0, 94);
   display: flex;
   opacity: 0.9;
-
 }
 
 .main-top label {
@@ -34,13 +33,13 @@
 }
 
 @keyframes img-animation {
-  0%{
+  0% {
     transform: translateX(0px);
-  } 
-  50%{
+  }
+  50% {
     transform: translateX(-200px);
-  } 
-  100%{
+  }
+  100% {
     transform: translateX(0px);
   }
 }
@@ -75,6 +74,7 @@
   font-weight: bold;
   margin-top: 30px;
 }
+
 .galleryAdmin:hover {
   background: rgb(51, 63, 62);
   color: white;
@@ -129,13 +129,13 @@
     width: 100vw;
   }
   @keyframes img-animation {
-    0%{
+    0% {
       transform: translateX(0px);
-    } 
-    50%{
+    }
+    50% {
       transform: translateX(-1000px);
-    } 
-    100%{
+    }
+    100% {
       transform: translateX(0px);
     }
   }
