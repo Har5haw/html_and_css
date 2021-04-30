@@ -12,7 +12,7 @@ let viewDataGrid = [[], [], [], []];
 let sumHeightColumn = [0, 0, 0, 0];
 let imagesData = [];
 
-function loadImages(imagesData) {
+function loadImages() {
     viewDataGrid = [[], [], [], []];
     sumHeightColumn = [0, 0, 0, 0];
     imagesData.forEach((element, index) => {
@@ -67,12 +67,12 @@ window.onload = () => {
                 responseData.forEach(async (element, index) => {
                     let metaData = await getImgPromise(element.image);
                     imagesData.push({ ...element, ...metaData });
-                    if (index == data.length - 1) {
-                        resolve(imagesData);
+                    if (index == responseData.length - 1) {
+                        resolve();
                     }
                 });
             })
-        }).then(imagesData => {
-            loadImages(imagesData);
+        }).then(() => {
+            loadImages();
         });
 }

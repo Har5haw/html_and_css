@@ -1,14 +1,19 @@
 function getFormData() {
-    return {
-        imgComponent: document.getElementById('pop-img'),
-        image: document.getElementById('pop-url').value,
-        name: document.getElementById('pop-name').value,
-        information: document.getElementById('pop-information').value,
-        date: document.getElementById('pop-date').value
+
+    if (getValidationErrors() == 0) {
+        return {
+            imgComponent: document.getElementById('pop-img'),
+            image: document.getElementById('pop-url').value,
+            name: document.getElementById('pop-name').value,
+            information: document.getElementById('pop-information').value,
+            date: document.getElementById('pop-date').value
+        }
     }
 }
 
 function imageEditClick(id) {
+
+    setNoErrors();
     document.getElementById('pop-img').src = imagesData[id].image;
 
     let url = document.getElementById('pop-url');
@@ -19,7 +24,9 @@ function imageEditClick(id) {
 
     document.getElementById('pop-information').value = imagesData[id].information;
 
-    document.getElementById('pop-date').value = imagesData[id].date;
+    let date = document.getElementById('pop-date');
+    date.value = imagesData[id].date;
+    date.max = getTodayDateForValidation();
 
     document.getElementById("popup-gallery").className = "popup-gallery";
 
@@ -31,6 +38,8 @@ function imageEditClick(id) {
 }
 
 function clickAdd() {
+
+    setNoErrors();
     document.getElementById('pop-img').src = "";
 
     let url = document.getElementById('pop-url');
@@ -43,18 +52,25 @@ function clickAdd() {
 
     document.getElementById('pop-date').value = "";
 
-    getElementById("popup-gallery").className = "popup-gallery";
+    document.getElementById("popup-gallery").className = "popup-gallery";
 
     document.getElementById("pop-button").setAttribute("onclick", "submitAdd()")
 }
 
 function changeImagePopup(url) {
-    document.getElementById('pop-img').src = url;
+
+    let img = document.getElementById('pop-img');
+    img.src = url;
+    img.setAttribute("alt", "no Image in this url");
+
 }
 
 async function submitEdit(id) {
 
     let formData = getFormData();
+    if (formData == null) {
+        return;
+    }
 
     let imageId = id.split("-")[0];
     console.log(imageId);
@@ -82,6 +98,9 @@ async function submitEdit(id) {
 function submitAdd() {
 
     var newImage = getFormData();
+    if (newImage == null) {
+        return;
+    }
 
     let img = document.getElementById('pop-img');
 

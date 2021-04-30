@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/scripts/galleryAdmin.js"></script>
     <script src="/scripts/galleryAdminPopup.js"></script>
-    <script src="/jsonFiles/images.json"></script>
+    <script src="/scripts/galleryAdminValidation.js"></script>
 </head>
 
 <body id="body">
@@ -20,15 +20,19 @@
                 <br>
                 <label for="pop-url">URL</label>
                 <input type="text" id="pop-url" style="color: black;" class="inputField" />
+                <span id="url-error" style="color: red;"></span>
                 <br>
                 <label for="pop-url">Name</label>
                 <input type="text" id="pop-name" style="color: black;" class="inputField" />
+                <span id="name-error" style="color: red;"></span>
                 <br>
                 <label for="pop-url">Information</label>
                 <input type="text" id="pop-information" style="color: black;" class="inputField" />
+                <span id="information-error" style="color: red;"></span>
                 <br>
                 <label for="pop-url">Date</label>
                 <input type="date" id="pop-date" style="color: black;" class="inputField" />
+                <span id="date-error" style="color: red;"></span>
                 <br>
                 <br>
                 <div style="display: flex; justify-content: space-between;"><button
