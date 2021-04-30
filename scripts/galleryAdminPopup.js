@@ -34,6 +34,8 @@ function imageEditClick(id) {
     button.id = id + "-button";
     button.setAttribute("onclick", "submitEdit(event.target.id)")
 
+    document.getElementById("pop-delete").id = id + "-delete"
+
     document.getElementById("pop-close").id = id + "-close";
 }
 
@@ -65,6 +67,16 @@ function changeImagePopup(url) {
 
 }
 
+function deleteImage(id) {
+    let imageId = id.split("-")[0];
+    imagesData.splice(imageId, 1);
+    console.log(id);
+
+    document.getElementById("popup-gallery").className = "popup-off";
+
+    loadImages();
+}
+
 async function submitEdit(id) {
 
     let formData = getFormData();
@@ -91,6 +103,8 @@ async function submitEdit(id) {
     document.getElementById(id).id = "pop-button";
 
     document.getElementById(imageId + "-close").id = "pop-close";
+
+    document.getElementById(imageId + "-delete").id = "pop-delete";
 
     loadImages();
 }
@@ -121,6 +135,8 @@ function closePop(id) {
     document.getElementById(imageId + "-button").id = "pop-button";
 
     document.getElementById(imageId + "-close").id = "pop-close";
+
+    document.getElementById(imageId + "-delete").id = "pop-delete";
 
     document.getElementById("popup-gallery").className = "popup-off";
 }

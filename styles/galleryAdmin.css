@@ -209,4 +209,6 @@ body {
     transform: scaleX(1.2) scaleY(1.2);
 }
 
-.inputField {}
+.no-display{
+    display: none;
+}
